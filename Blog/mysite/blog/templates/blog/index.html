@@ -1,0 +1,70 @@
+{% extends "blog/base.html"%}
+{% block content %}
+<div class="container">
+<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 font-italic">Stay Away</h1>
+          <p class="lead my-3">We are obessed with our mobile deivces a lot. We are in a mission of keeping you <mark>Stay Away from it</mark></p>
+        
+        </div>
+      </div>
+</div>
+<div class="container">
+<div class="row mb-2">
+        <div class="col-md-6">
+          <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary">Rifath Sharook</strong>
+              <h3 class="mb-0">
+                <a class="text-dark" href="#">Featured post from  Rifath Sharook</a>
+              </h3>
+              <div class="mb-1 text-muted">January 12</div>
+              <p class="card-text mb-auto"> Mobiles are obessing us.</p>
+              <a href="#">Continue reading</a>
+            </div>
+            
+    
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="container">
+<div class="card">
+    <div class="card-body">
+        
+        <h5 class="card-title">Related videos </h5>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0K5OO2ybueM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="card-text"> Psychologist Adam Alter has spent the last five years studying how much time screens steal from us and how they're getting away with it. He shares why all those hours you spend staring at your smartphone, tablet or computer might be making you miserable -- and what you can do about it.</p>
+    </div>
+    </div>
+
+
+
+
+
+</div>
+   
+<main role="main" class="container">
+        <div class="row">
+          <div class="col-md-8 blog-main">
+            <h3 class="pb-3 mb-4 font-italic border-bottom">
+              Latest Posts
+            </h3>
+  
+
+{%for post in posts%}
+<div class="container">
+<div class="blog-post">
+    
+    <h2 class="blog-post-title"> <a href="#"> {{post.title}}</a></h2>
+    <p class="blog-post-meta"> {{post.date}} <a href=""> {{post.author}}</a></p>
+    <p class="lead"> {{post.content}}</p>
+    <hr>
+{%endfor%}
+
+
+</div>
+</div>
+{%endblock%}
